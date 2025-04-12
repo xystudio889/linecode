@@ -1,17 +1,16 @@
 from setuptools import setup, find_packages
 import sys
 
-# 动态控制文件包含
 data_files = []
 if sys.platform == "win32":
-    data_files = [('Scripts', ['scripts/line.exe'])]
+    data_files = [('Scripts',[])]
 
 with open("README.md",encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
     name = "linecode",
-    version = "0.1.2",
+    version = "0.1.3",
     packages = find_packages(),
     install_requires = [],
     python_requires = ">=3.8",
